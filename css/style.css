@@ -1638,7 +1638,7 @@ ul, li {
   color: #ff9c00;
 }
 
-.specifications .form_section {
+.form_section {
   padding: 128px 94px 74px;
   position: relative;
   background-image: url("../img/img_3.png"), url("../img/form_section_bg.png");
@@ -1649,7 +1649,7 @@ ul, li {
   z-index: auto;
 }
 
-.specifications .form_section::before {
+.form_section::before {
   content: '';
   display: block;
   width: 290px;
@@ -1664,7 +1664,7 @@ ul, li {
   right: -30px;
 }
 
-.specifications .form_section::after {
+.form_section::after {
   content: '';
   position: absolute;
   background-color: #ffffff;
@@ -1682,13 +1682,13 @@ ul, li {
   height: 50%;
 }
 
-.specifications .form_section__heading {
+.form_section__heading {
   font-size: 36px;
   max-width: 500px;
   margin-bottom: 25px;
 }
 
-.specifications .form_section__text {
+.form_section__text {
   max-width: 380px;
   font-size: 24px;
   font-weight: normal;
@@ -1696,7 +1696,7 @@ ul, li {
   margin-bottom: 40px;
 }
 
-.specifications .form_section form {
+.form_section form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1713,7 +1713,7 @@ ul, li {
   position: relative;
 }
 
-.specifications .form_section form label {
+.form_section form label {
   width: 255px;
   font-size: 16px;
   line-height: 36px;
@@ -1722,7 +1722,7 @@ ul, li {
   margin-right: 30px;
 }
 
-.specifications .form_section form input {
+.form_section form input {
   width: 100%;
   display: block;
   background-color: #f2f4f6;
@@ -1736,15 +1736,15 @@ ul, li {
           box-shadow: inset 0 3px 10px -3px rgba(38, 45, 52, 0.4);
 }
 
-.specifications .form_section form .submit {
+.form_section form .submit {
   padding: 0 80px;
 }
 
-.specifications .form_section form .submit::before {
+.form_section form .submit::before {
   background-position: top -9px center;
 }
 
-.specifications .form_section .descr {
+.form_section .descr {
   font-size: 14px;
   line-height: 36px;
 }
@@ -1915,14 +1915,14 @@ ul, li {
     position: relative;
     margin: -240px 0 0 auto;
   }
-  .specifications .form_section {
+  .form_section {
     max-width: 500px;
     margin: 0 auto 50px;
     background-image: none;
     z-index: 1;
     padding: 30px 30px 40px;
   }
-  .specifications .form_section::before {
+  .form_section::before {
     background-image: none;
     top: 0;
     left: 0;
@@ -1937,29 +1937,29 @@ ul, li {
             box-shadow: 0 10px 20px 1px rgba(230, 230, 230, 0.6);
     content: '';
   }
-  .specifications .form_section::after {
+  .form_section::after {
     bottom: -15px;
   }
-  .specifications .form_section__text {
+  .form_section__text {
     text-align: center;
     margin: 0 auto 30px;
   }
-  .specifications .form_section form {
+  .form_section form {
     display: block;
   }
-  .specifications .form_section form input {
+  .form_section form input {
     width: 100%;
   }
-  .specifications .form_section form label {
+  .form_section form label {
     display: block;
     width: 100%;
     margin: 0 auto 20px;
   }
-  .specifications .form_section form .submit {
+  .form_section form .submit {
     width: 100%;
     margin-bottom: 10px;
   }
-  .specifications .form_section .descr {
+  .form_section .descr {
     line-height: 120%;
     margin-bottom: 40px;
   }
@@ -2157,29 +2157,29 @@ ul, li {
   .specifications-list li .descr {
     min-width: 17%;
   }
-  .specifications .form_section {
+  .form_section {
     padding: 25px 15px;
     border-radius: 8px;
   }
-  .specifications .form_section::before {
+  .form_section::before {
     bottom: -45px;
   }
-  .specifications .form_section__heading {
+  .form_section__heading {
     font-size: 24px;
     margin-bottom: 15px;
   }
-  .specifications .form_section__text {
+  .form_section__text {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
   }
-  .specifications .form_section form label {
+  .form_section form label {
     margin-bottom: 10px;
   }
-  .specifications .form_section form input {
+  .form_section form input {
     height: 64px;
   }
-  .specifications .form_section form .submit {
+  .form_section form .submit {
     margin-top: 15px;
   }
 }
