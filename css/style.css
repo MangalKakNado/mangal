@@ -845,6 +845,13 @@ ul, li {
   .title-heading {
     text-align: center!important;
   }
+  .reviews .wrap {
+    flex-direction: column;
+  }
+  .reviews img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2023,6 +2030,8 @@ ul, li {
   }
   .order {
     padding: 170px 0;
+
+    background-position: right center;
   }
   .order-title {
     background-image: none;
@@ -2109,7 +2118,7 @@ ul, li {
     
     width: 100%;
 
-    padding: 15px 0;
+    padding: 10px 0;
 
     text-align: center;
   }
