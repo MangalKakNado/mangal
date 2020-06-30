@@ -5,7 +5,7 @@ $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
 
 //в переменную $token нужно вставить токен, который нам прислал @botFather
-$token = "1082686904:AAExl-XnAjN1A51W2fOxuRLZrKzmGSrAfMg";
+$token = "";
 
 //нужна вставить chat_id (Как получить chad id, читайте ниже)
 $chat_id = "-434768119";
