@@ -466,14 +466,14 @@
         <h2 class="title-heading heading">
             Обратный звонок
         </h2>
-        <form>
+        <form action="send.php" method="post">
             <label for="inp_3" class="label">
                 Введите ваше имя
-                <input name="name" required type="text" id="inp_3" placeholder="Ваше имя">
+                <input name="user_name" required type="text" id="inp_3" placeholder="Ваше имя">
             </label>
             <label for="inp_4" class="label">
                 Введите ваш телефон
-                <input name="phone" required type="text" id="inp_4" placeholder="Ваш телефон">
+                <input name="user_phone" required type="text" id="inp_4" placeholder="Ваш телефон">
             </label>
             <button type="submit" class="btn submit">Отправить</button>
         </form>
