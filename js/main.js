@@ -1,11 +1,13 @@
 $('form').on('submit', function (e) {
     e.stopPropagation();
     e.preventDefault();
+    console.log($(this).serialize());
 
     $.ajax({
         type: "POST",
-        url: "../mail.php",
-        data: $(this).serialize(),
+        url: "https://70u98j1raf.execute-api.eu-central-1.amazonaws.com",
+        data: JSON.stringify($(this).serialize()),
+        dataType: "json",
         success: function (text) {
             if (text === "success") {
                 alert("Спасибо. Заявка отправлена и мы свяжемся с Вами в ближайшее время.");
