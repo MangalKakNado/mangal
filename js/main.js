@@ -2,13 +2,14 @@ $('form').on('submit', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    console.log($(this).serialize().split("&").map(i => ({[i.split("=")[0]]: i.split("=")[1]})));
+    const request = $(this).serialize().split("&").map(i => ({[i.split("=")[0]]: i.split("=")[1]}));
+    console.log(request);
 
     $.ajax({
         url: "https://n9xa29hcy3.execute-api.eu-central-1.amazonaws.com/telApi/telegramapi",
         type: "POST",
         crossDomain: true,
-        data: JSON.stringify($(this).serialize()),
+        data: JSON.stringify(request),
         dataType: "json",
         success: function (text) {
             if (text === "success") {
