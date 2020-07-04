@@ -2,6 +2,8 @@ $('form').on('submit', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
+    console.log($(this).serialize());
+    
     $.ajax({
         url: "https://n9xa29hcy3.execute-api.eu-central-1.amazonaws.com/telApi/telegramapi",
         type: "POST",
