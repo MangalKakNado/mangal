@@ -1,10 +1,9 @@
 $('form').on('submit', function (e) {
     e.stopPropagation();
     e.preventDefault();
-    console.log($(this).serialize());
 
     $.ajax({
-        url: "https://70u98j1raf.execute-api.eu-central-1.amazonaws.com",
+        url: "https://n9xa29hcy3.execute-api.eu-central-1.amazonaws.com/telApi/telegramapi",
         type: "POST",
         crossDomain: true,
         data: JSON.stringify($(this).serialize()),
