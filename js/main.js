@@ -4,8 +4,9 @@ $('form').on('submit', function (e) {
     console.log($(this).serialize());
 
     $.ajax({
-        type: "POST",
         url: "https://70u98j1raf.execute-api.eu-central-1.amazonaws.com",
+        type: "POST",
+        crossDomain: true,
         data: JSON.stringify($(this).serialize()),
         dataType: "json",
         success: function (text) {
