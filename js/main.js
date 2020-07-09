@@ -2,14 +2,19 @@ $('form').on('submit', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    const request = $(this).serialize().split("&").map(i => ({[i.split("=")[0]]: i.split("=")[1]}));
-    console.log(request);
+    const data = {};
+
+    $(this).find('input').each(function() {
+        data[this.name] = $(this).val();
+    });
+
+    console.log(data);
 
     $.ajax({
         url: "https://n9xa29hcy3.execute-api.eu-central-1.amazonaws.com/telApi/telegramapi",
         type: "POST",
         crossDomain: true,
-        data: JSON.stringify(request),
+        data: JSON.stringify(data),
         dataType: "json",
         success: function (text) {
             if (text === "success") {
@@ -20,6 +25,8 @@ $('form').on('submit', function (e) {
             }
         }
     });
+    alert("Спасибо. Заявка отправлена и мы свяжемся с Вами в ближайшее время.");
+    $('form').each((e, t) => t.reset());
 });
 
 /*---------------------------------------------------end*/
