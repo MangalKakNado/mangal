@@ -8,12 +8,9 @@ $('form').on('submit', function (e) {
         data[this.name] = $(this).val();
     });
 
-    console.log(data);
-
     $.ajax({
         url: "https://n9xa29hcy3.execute-api.eu-central-1.amazonaws.com/telApi/telegramapi",
         type: "POST",
-        crossDomain: true,
         data: JSON.stringify(data),
         dataType: "json",
         success: function (text) {
@@ -25,37 +22,38 @@ $('form').on('submit', function (e) {
             }
         }
     });
+
     alert("Спасибо. Заявка отправлена и мы свяжемся с Вами в ближайшее время.");
     $('form').each((e, t) => t.reset());
+    hideModals();
 });
 
 /*---------------------------------------------------end*/
 
-$(function () {
-    function showModal(id) {
-        $(id).fadeIn();
-    }
-    function hideModals() {
-        $(document.body).removeClass('is-open-modal');
-        $('.modal').fadeOut();
-    }
-    $(".modal-open").on('click', function (e) {
-        console.log("modal click");
-        showModal('#modal_1');
-        e.preventDefault();
-    });
 
-    $(document).on('click', function (e) {
-        if (!(
-            ($(e.target).parents('.modal-content').length)
-            || ($(e.target).hasClass('modal-content'))
-            || ($(e.target).hasClass('modal-open'))
-            || ($(e.target).hasClass('data_processing-label'))
-        )
-        ) {
-            hideModals();
-        }
-    });
+function showModal(id) {
+    $(id).fadeIn();
+}
+function hideModals() {
+    $(document.body).removeClass('is-open-modal');
+    $('.modal').fadeOut();
+}
+$(".modal-open").on('click', function (e) {
+    console.log("modal click");
+    showModal('#modal_1');
+    e.preventDefault();
+});
+
+$(document).on('click', function (e) {
+    if (!(
+        ($(e.target).parents('.modal-content').length)
+        || ($(e.target).hasClass('modal-content'))
+        || ($(e.target).hasClass('modal-open'))
+        || ($(e.target).hasClass('data_processing-label'))
+    )
+    ) {
+        hideModals();
+    }
 });
 
 /*---------------------------------------------------end*/
@@ -82,12 +80,3 @@ $('.go_to').click(function () {
     }
     return false;
 });
-
-/*---------------------------------------------------end*/
-
-// $('.slider').slick({
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-// });
