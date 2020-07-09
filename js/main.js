@@ -23,6 +23,8 @@ $('form').on('submit', function (e) {
         }
     });
 
+    fbq('trackCustom', 'Request');
+
     alert("Спасибо. Заявка отправлена и мы свяжемся с Вами в ближайшее время.");
     $('form').each((e, t) => t.reset());
     hideModals();
